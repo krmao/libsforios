@@ -87,7 +87,7 @@
         ]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-documentation",
-      "source_files": "fabric/core/**/*.{m,mm,cpp,h}",
+      "source_files": "ReactCommon/fabric/core/**/*.{m,mm,cpp,h}",
       "exclude_files": "**/tests/**/*",
       "header_dir": "react/core",
       "pod_target_xcconfig": {
