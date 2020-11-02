@@ -20,6 +20,7 @@
     "HEADER_SEARCH_PATHS": "\"$(PODS_ROOT)/boost-for-react-native\" \"$(PODS_ROOT)/Folly\" \"$(PODS_ROOT)/DoubleConversion\""
   },
   "header_dir": "cxxreact",
+  "public_header_files": "ReactCommon/cxxreact/**/*.{h}",
   "dependencies": {
     "boost-for-react-native": [
       "1.63.0"
