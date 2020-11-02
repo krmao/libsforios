@@ -17,6 +17,7 @@
   "header_dir": "yoga",
   "requires_arc": false,
   "pod_target_xcconfig": {
+    "HEADER_SEARCH_PATHS": "\"$(PODS_ROOT)/Headers/Private/Yoga\"",
     "DEFINES_MODULE": "YES"
   },
   "compiler_flags": [
