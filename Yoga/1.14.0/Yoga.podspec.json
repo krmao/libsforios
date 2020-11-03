@@ -13,6 +13,7 @@
     "git": "https://github.com/facebook/react-native.git",
     "tag": "v0.62.2"
   },
+  "libraries": "stdc++",
   "module_name": "yoga",
   "header_dir": "yoga",
   "requires_arc": false,
