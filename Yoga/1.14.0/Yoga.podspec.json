@@ -37,6 +37,7 @@
   "public_header_files": [
     "ReactCommon/yoga/yoga/Yoga.h",
     "ReactCommon/yoga/yoga/YGEnums.h",
-    "ReactCommon/yoga/yoga/YGMacros.h"
+    "ReactCommon/yoga/yoga/YGMacros.h",
+    "ReactCommon/yoga/yoga/YGValue.h"
   ]
 }
