@@ -14,7 +14,7 @@
     "tag": "v0.62.2"
   },
   "prepare_command": "#!/bin/bash\n# Copyright (c) Facebook, Inc. and its affiliates.\n#\n# This source code is licensed under the MIT license found in the\n# LICENSE file in the root directory of this source tree.\n\n# This script collects the \"core\" component schemas used by fabric\n# then uses react-native-codegen to generate the component headers\n# to a location that the podspecs expect.\n\n# shellcheck disable=SC2038\n\nfind \"$PWD/../Libraries\" -name \"*NativeComponent.js\" -print | xargs yarn flow-node packages/react-native-codegen/src/cli/combine/combine-js-to-schema-cli.js schema-rncore.json\nyarn flow-node packages/react-native-codegen/buck_tests/generate-tests.js schema-rncore.json rncore ReactCommon/fabric/components/rncore rncore",
-  "source_files": "dummyFile.cpp",
+  "source_files": "ReactCommon/dummyFile.cpp",
   "libraries": "stdc++",
   "pod_target_xcconfig": {
     "USE_HEADERMAP": "YES",
@@ -49,7 +49,7 @@
         ]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-      "source_files": "fabric/attributedstring/**/*.{m,mm,cpp,h}",
+      "source_files": "ReactCommon/fabric/attributedstring/**/*.{m,mm,cpp,h}",
       "exclude_files": "**/tests/*",
       "header_dir": "react/attributedstring",
       "pod_target_xcconfig": {
@@ -64,7 +64,7 @@
         ]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-      "source_files": "better/**/*.{m,mm,cpp,h}",
+      "source_files": "ReactCommon/better/**/*.{m,mm,cpp,h}",
       "exclude_files": "**/tests/*",
       "header_dir": "better",
       "pod_target_xcconfig": {
@@ -73,7 +73,7 @@
     },
     {
       "name": "config",
-      "source_files": "config/*.{m,mm,cpp,h}",
+      "source_files": "ReactCommon/config/*.{m,mm,cpp,h}",
       "header_dir": "react/config",
       "pod_target_xcconfig": {
         "HEADER_SEARCH_PATHS": "\"$(PODS_TARGET_SRCROOT)/ReactCommon\""
@@ -105,7 +105,7 @@
             ]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-          "source_files": "fabric/components/activityindicator/**/*.{m,mm,cpp,h}",
+          "source_files": "ReactCommon/fabric/components/activityindicator/**/*.{m,mm,cpp,h}",
           "exclude_files": "**/tests/*",
           "header_dir": "react/components/activityindicator",
           "pod_target_xcconfig": {
@@ -120,7 +120,7 @@
             ]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-          "source_files": "fabric/components/image/**/*.{m,mm,cpp,h}",
+          "source_files": "ReactCommon/fabric/components/image/**/*.{m,mm,cpp,h}",
           "exclude_files": "**/tests/*",
           "header_dir": "react/components/image",
           "pod_target_xcconfig": {
@@ -135,7 +135,7 @@
             ]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-          "source_files": "fabric/components/modal/**/*.{m,mm,cpp,h}",
+          "source_files": "ReactCommon/fabric/components/modal/**/*.{m,mm,cpp,h}",
           "exclude_files": "**/tests/*",
           "header_dir": "react/components/modal",
           "pod_target_xcconfig": {
@@ -150,7 +150,7 @@
             ]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-          "source_files": "fabric/components/rncore/*.{m,mm,cpp,h}",
+          "source_files": "ReactCommon/fabric/components/rncore/*.{m,mm,cpp,h}",
           "exclude_files": [
             "**/tests/*",
             "fabric/components/rncore/*Tests.{h,cpp}"
@@ -168,7 +168,7 @@
             ]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-          "source_files": "fabric/components/root/**/*.{m,mm,cpp,h}",
+          "source_files": "ReactCommon/fabric/components/root/**/*.{m,mm,cpp,h}",
           "exclude_files": "**/tests/*",
           "header_dir": "react/components/root",
           "pod_target_xcconfig": {
@@ -183,7 +183,7 @@
             ]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-          "source_files": "fabric/components/scrollview/**/*.{m,mm,cpp,h}",
+          "source_files": "ReactCommon/fabric/components/scrollview/**/*.{m,mm,cpp,h}",
           "exclude_files": "**/tests/*",
           "header_dir": "react/components/scrollview",
           "pod_target_xcconfig": {
@@ -198,7 +198,7 @@
             ]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-          "source_files": "fabric/components/slider/**/*.{m,mm,cpp,h}",
+          "source_files": "ReactCommon/fabric/components/slider/**/*.{m,mm,cpp,h}",
           "exclude_files": [
             "**/tests/*",
             "**/android/*"
@@ -216,7 +216,7 @@
             ]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-          "source_files": "fabric/components/text/**/*.{m,mm,cpp,h}",
+          "source_files": "ReactCommon/fabric/components/text/**/*.{m,mm,cpp,h}",
           "exclude_files": "**/tests/*",
           "header_dir": "react/components/text",
           "pod_target_xcconfig": {
@@ -234,7 +234,7 @@
             ]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-          "source_files": "fabric/components/view/**/*.{m,mm,cpp,h}",
+          "source_files": "ReactCommon/fabric/components/view/**/*.{m,mm,cpp,h}",
           "exclude_files": "**/tests/*",
           "header_dir": "react/components/view",
           "pod_target_xcconfig": {
@@ -251,7 +251,7 @@
         ]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-      "source_files": "fabric/debug/**/*.{m,mm,cpp,h}",
+      "source_files": "ReactCommon/fabric/debug/**/*.{m,mm,cpp,h}",
       "exclude_files": "**/tests/*",
       "header_dir": "react/debug",
       "pod_target_xcconfig": {
@@ -269,7 +269,7 @@
         ]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-      "source_files": "fabric/imagemanager/**/*.{m,mm,cpp,h}",
+      "source_files": "ReactCommon/fabric/imagemanager/**/*.{m,mm,cpp,h}",
       "exclude_files": [
         "**/tests/*",
         "**/android/*",
@@ -288,7 +288,7 @@
         ]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-      "source_files": "fabric/mounting/**/*.{m,mm,cpp,h}",
+      "source_files": "ReactCommon/fabric/mounting/**/*.{m,mm,cpp,h}",
       "exclude_files": "**/tests/*",
       "header_dir": "react/mounting",
       "pod_target_xcconfig": {
@@ -303,7 +303,7 @@
         ]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-      "source_files": "fabric/textlayoutmanager/**/*.{m,mm,cpp,h}",
+      "source_files": "ReactCommon/fabric/textlayoutmanager/**/*.{m,mm,cpp,h}",
       "exclude_files": [
         "**/tests/*",
         "**/android/*",
@@ -322,7 +322,7 @@
         ]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32",
-      "source_files": "fabric/uimanager/**/*.{m,mm,cpp,h}",
+      "source_files": "ReactCommon/fabric/uimanager/**/*.{m,mm,cpp,h}",
       "header_dir": "react/uimanager",
       "exclude_files": [
         "**/tests/*",
@@ -334,7 +334,7 @@
     },
     {
       "name": "utils",
-      "source_files": "utils/*.{m,mm,cpp,h}",
+      "source_files": "ReactCommon/utils/*.{m,mm,cpp,h}",
       "header_dir": "react/utils",
       "pod_target_xcconfig": {
         "HEADER_SEARCH_PATHS": "\"$(PODS_TARGET_SRCROOT)/ReactCommon\" \"$(PODS_ROOT)/Folly\""
