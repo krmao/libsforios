@@ -34,5 +34,9 @@
     "tvos": "9.2"
   },
   "source_files": "ReactCommon/yoga/yoga/**/*.{cpp,h}",
-  "public_header_files": "ReactCommon/yoga/yoga/**/*.{h}"
+  "public_header_files": [
+    "ReactCommon/yoga/yoga/Yoga.h",
+    "ReactCommon/yoga/yoga/YGEnums.h",
+    "ReactCommon/yoga/yoga/YGMacros.h"
+  ]
 }
