@@ -15,7 +15,7 @@
     "git": "https://github.com/facebook/react-native.git",
     "tag": "v0.62.2"
   },
-  "source_files": "Libraries/Settings/*.{m,mm}",
+  "source_files": "Libraries/Settings/*.{h,m,mm}",
   "preserve_paths": [
     "package.json",
     "LICENSE",
